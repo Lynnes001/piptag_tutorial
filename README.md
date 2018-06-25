@@ -37,3 +37,6 @@
 - my: (in order to receive msg from tag:03377)
   
   `$ sudo stdbuf -o0 ./pip_sense.v2 l l | stdbuf -o0 grep TX:03377`
+
+Result:
+![finish](screen.png)
