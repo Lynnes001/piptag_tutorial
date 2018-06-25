@@ -34,7 +34,7 @@
   
   `$ sudo stdbuf -o0 ./pip_sense.v2 l l | stdbuf -o0 grep TX:0$1 |tee $2`
 
-- my: (in order to receive msg from tag:03377)
+- my: (in order to receive msg from Tag: 03377)
   
   `$ sudo stdbuf -o0 ./pip_sense.v2 l l | stdbuf -o0 grep TX:03377`
 
