@@ -36,7 +36,7 @@ File Structure
  
   > sensor_aggregator_protocol.hpp
  
-  > libcurl
+  > *libcurl
 
 - compile:
 
