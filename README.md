@@ -132,15 +132,15 @@ Steps for flashing
 
    Right-Click > Resource Configurations > Exclude from Build...
   
-  2. The original program is created with compiler version 3.3.3 but is no longer downloadable, use version 4.4.5 as an alternative.
+  2. The original program is created with compiler version 3.3.3 but is no longer downloadable, use version 4.4.5 or 4.4.8 as an alternative.
   
-  Project > Properties > General > Compiler Version > Select TI v4.4.5
+  Project > Properties > General > Compiler Version > Select TI v4.4.5/TI v4.4.8
   
   If there is no such selection like TI v4.4.5. It may show the compiler do not match in warning dialog
   
   ![WARNING DIALOG](images/warning.png)
   
-  Click into warning details and there could be a link to CCS APP CENTER download a compiler and try again. If this does not work, download TI compiler v4.4.5 [msp430-gcc-full-windows-installer-6.0.1.0.rar](downloads), install and follow the steps.
+  Click into warning details and there could be a link to CCS APP CENTER download a compiler and try again. If this does not work, download TI compiler v4.4.5 [ti_cgt_msp430_4.4.8_windows_installer.exe](downloads) or from [official website](http://software-dl.ti.com/codegen/non-esd/downloads/download.htm#MSP430), install and do following steps.
   
   Project > Properties > General > Compiler Version > More > Select a new compiler from file-system > Browse (the compiler path).
 
