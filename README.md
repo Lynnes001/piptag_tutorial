@@ -64,7 +64,6 @@ Result:
 ![finish](images/screen.png)
 
 
-
 # How to flash the PIP tag (optional)
 
 ### Hardware Prerequisite:
@@ -74,10 +73,12 @@ Result:
  4. USB receiver plugged in. (for debugging)
 
 ### Programs
-- Required IDE: Code Composer Studio (Checked avalible on Version: 6.1.1)
+- Required 
+  > Code Composer Studio (Checked avalible on Version: 6.1.1) with c++ compiler v 4.4.5 installed
+  
+  > LaunchPad MSP-EXP430G2 Driver (download from Texas Instruments offical site)
 
-File Structure (important files listed only)
-Provided code
+- File Structure (important files are listed only) Provided code
 ```
 PIP1_SendBeacon
 ├── ...
@@ -121,7 +122,7 @@ Steps for flashing
  4. Simply click build, debug and result button in debug view in Code Composer step by step. 
  
  
-### Troubleshooting
+### Flash Code Troubleshooting
   
   1. (from original readme.md)Due to the use of GCC attributes for packing structs, you need to enable GCC compatibility mode. This is an option found in the Project Properties dialog window.
 
