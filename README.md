@@ -61,4 +61,67 @@ File Structure
   *`sudo` adminstrator permission is required since it uses usb connection. `stdbuf -o0` set buffering as none. `./pip_sense.v2 l l`, the path of the file follows with two parameters means using localhost. `grep` use a regular expression to match 03377 or 0$1. `tee` redriect data stream to both the screen and the file.
    
 Result:
-![finish](screen.png)
+![finish](images/screen.png)
+
+
+
+# How to flash the PIP tag (optional)
+
+### Hardware Prerequisite:
+ 1. TI MSP-EXP430G2 LaunchPad.
+ 2. mini USB cable.
+ 3. PIP tag.
+ 4. USB receiver plugged in. (for debugging)
+
+### Programs
+- Required IDE: Code Composer Studio (Checked avalible on Version: 6.1.1)
+
+File Structure (important files listed only)
+Provided code
+```
+PIP1_SendBeacon
+├── ...
+├── main.c
+├── main.h
+├── floatToBits.cpp
+├── settings.h
+├── ...
+```
+
+Steps for flashing
+
+ 1. open IDE
+ ![CCS IDE](images/IDE.png)
+ 
+ 2. in setting.h line 56 
+ 
+ ```
+ #define TXER_ID 3378	//0xABBADABA is default ID for automatic flashing
+ ```
+ 
+ // more options for setting.h
+ 
+ Change the `3378` to the ID of the PIP tag you want to flash, it is 3378 for my PIP tag.
+ 
+ 3. Connect the program LaunchPad to PC and PIP tag like this. Remember to uninstall the battery before flashing.
+  ![CODE FLASH SETUP](images/setup.jpg)
+ 
+ 4. Simply click build, debug and result button in debug view in Code Composer step by step. 
+ 
+ 
+### Troubleshooting
+
+*1. Due to the use of GCC attributes for packing structs, you need to enable GCC compatibility mode. This is an option found in the Project Properties dialog window.
+
+  Project > Properties > CCS Build > MSP430 Compiler > Advanced Options 
+    > Language Options > Enable support for GCC extensions (--gcc)
+
+You also need to exclude "floatToBits.cpp" from the build if it is causing
+errors.  Be sure to select all builds you have configured in the dialog
+window.
+
+  Right-Click > Resource Configurations > Exclude from Build...
+  
+2. The original program is created with compiler version 3.3.3 but is no longer downloadable, use version 4.4.5 as an alternative.
+
+
