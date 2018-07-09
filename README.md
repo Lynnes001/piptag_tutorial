@@ -54,11 +54,11 @@ File Structure
   
   `$ sudo stdbuf -o0 ./pip_sense.v2 l l | stdbuf -o0 grep TX:0$1 |tee $2`
 
-- my: (in order to receive msg from Tag: 03377)
+- my: (in order to receive msg from Tag: 03378)
   
-  `$ sudo stdbuf -o0 ./pip_sense.v2 l l | stdbuf -o0 grep TX:03377`
+  `$ sudo stdbuf -o0 ./pip_sense.v2 l l | stdbuf -o0 grep TX:03378`
   
-  *`sudo` adminstrator permission is required since it uses usb connection. `stdbuf -o0` set buffering as none. `./pip_sense.v2 l l`, the path of the file follows with two parameters means using localhost. `grep` use a regular expression to match 03377 or 0$1. `tee` redriect data stream to both the screen and the file.
+  *`sudo` adminstrator permission is required since it uses usb connection. `stdbuf -o0` set buffering as none. `./pip_sense.v2 l l`, the path of the file follows with two parameters means using localhost. `grep` use a regular expression to match 03378 or 0$1. `tee` redriect data stream to both the screen and the file.
    
 Result:
 ![finish](images/screen.png)
@@ -126,12 +126,27 @@ Steps for flashing
   
   1. (from original readme.md)Due to the use of GCC attributes for packing structs, you need to enable GCC compatibility mode. This is an option found in the Project Properties dialog window.
 
-  Project > Properties > CCS Build > MSP430 Compiler > Advanced Options > Language Options > Enable support for GCC extensions (--gcc)
+   Project > Properties > CCS Build > MSP430 Compiler > Advanced Options > Language Options > Enable support for GCC extensions (--gcc)
 
-  You also need to exclude "floatToBits.cpp" from the build if it is causing errors.  Be sure to select all builds you have configured in the dialog window.
+   You also need to exclude "floatToBits.cpp" from the build if it is causing errors.  Be sure to select all builds you have configured in the dialog window.
 
-  Right-Click > Resource Configurations > Exclude from Build...
+   Right-Click > Resource Configurations > Exclude from Build...
   
   2. The original program is created with compiler version 3.3.3 but is no longer downloadable, use version 4.4.5 as an alternative.
+  
+  Project > Properties > General > Compiler Version > Select TI v4.4.5
+  
+  If there is no such selection like TI v4.4.5. It may show the compiler do not match in warning dialog
+  
+  ![WARNING DIALOG](images/warning.png)
+  
+  Click into warning details and there could be a link to CCS APP CENTER download a compiler and try again. If this does not work, download [TI compiler 4.4.5](downloads/msp430-gcc-full-windows-installer-6.0.1.0.exe), install and follow the steps.
+  
+  Project > Properties > General > Compiler Version > More > Select a new compiler from file-system > Browse (the compiler path).
+
+
+
+
+
 
 
