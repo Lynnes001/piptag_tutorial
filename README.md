@@ -92,6 +92,7 @@ PIP1_SendBeacon
 Steps for flashing
 
  1. open IDE
+ 
  ![CCS IDE](images/IDE.png)
  
  2. in setting.h line 56 
@@ -117,6 +118,7 @@ Steps for flashing
  
  
  3. Connect the program LaunchPad to PC and PIP tag like this. Remember to uninstall the battery before flashing.
+ 
   ![CODE FLASH SETUP](images/setup.jpg)
  
  4. Simply click build, debug and result button in debug view in Code Composer step by step. 
@@ -124,7 +126,7 @@ Steps for flashing
  
 ### Flash Code Troubleshooting
   
-  1. (from original readme.md)Due to the use of GCC attributes for packing structs, you need to enable GCC compatibility mode. This is an option found in the Project Properties dialog window.
+  1. (from original readme.md) Due to the use of GCC attributes for packing structs, you need to enable GCC compatibility mode. This is an option found in the Project Properties dialog window.
 
    Project > Properties > CCS Build > MSP430 Compiler > Advanced Options > Language Options > Enable support for GCC extensions (--gcc)
 
@@ -136,9 +138,12 @@ Steps for flashing
   
   Project > Properties > General > Compiler Version > Select TI v4.4.5/TI v4.4.8
   
-  If there is no such selection like TI v4.4.5. It may show the compiler do not match in warning dialog
+  If there is no such selection like TI v4.4.5/v4.4.8. It may show the compiler do not match in the warning dialog.
   
   ![WARNING DIALOG](images/warning.png)
+  
+  ![WARNING DIALOG](images/ccsappcenter.png)
+  CCS APP CENTER
   
   Click into warning details and there could be a link to CCS APP CENTER download a compiler and try again. If this does not work, download TI compiler v4.4.5 [ti_cgt_msp430_4.4.8_windows_installer.exe](downloads) or from [official website](http://software-dl.ti.com/codegen/non-esd/downloads/download.htm#MSP430), install and do following steps.
   
