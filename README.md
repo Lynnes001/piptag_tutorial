@@ -113,12 +113,9 @@ Steps for flashing
   
   1. (from original readme.md)Due to the use of GCC attributes for packing structs, you need to enable GCC compatibility mode. This is an option found in the Project Properties dialog window.
 
-  Project > Properties > CCS Build > MSP430 Compiler > Advanced Options 
-    > Language Options > Enable support for GCC extensions (--gcc)
+  Project > Properties > CCS Build > MSP430 Compiler > Advanced Options > Language Options > Enable support for GCC extensions (--gcc)
 
-You also need to exclude "floatToBits.cpp" from the build if it is causing
-errors.  Be sure to select all builds you have configured in the dialog
-window.
+  You also need to exclude "floatToBits.cpp" from the build if it is causing errors.  Be sure to select all builds you have configured in the dialog window.
 
   Right-Click > Resource Configurations > Exclude from Build...
   
