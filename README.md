@@ -140,7 +140,7 @@ Steps for flashing
   
   ![WARNING DIALOG](images/warning.png)
   
-  Click into warning details and there could be a link to CCS APP CENTER download a compiler and try again. If this does not work, download [TI compiler 4.4.5](downloads/msp430-gcc-full-windows-installer-6.0.1.0.exe), install and follow the steps.
+  Click into warning details and there could be a link to CCS APP CENTER download a compiler and try again. If this does not work, download [TI compiler 4.4.5](downloads/msp430-gcc-full-windows-installer-6.0.1.0.rar), install and follow the steps.
   
   Project > Properties > General > Compiler Version > More > Select a new compiler from file-system > Browse (the compiler path).
 
