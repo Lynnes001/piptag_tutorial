@@ -110,8 +110,8 @@ Steps for flashing
  
  
 ### Troubleshooting
-
-*1. Due to the use of GCC attributes for packing structs, you need to enable GCC compatibility mode. This is an option found in the Project Properties dialog window.
+  
+  1. (from original readme.md)Due to the use of GCC attributes for packing structs, you need to enable GCC compatibility mode. This is an option found in the Project Properties dialog window.
 
   Project > Properties > CCS Build > MSP430 Compiler > Advanced Options 
     > Language Options > Enable support for GCC extensions (--gcc)
@@ -122,6 +122,6 @@ window.
 
   Right-Click > Resource Configurations > Exclude from Build...
   
-2. The original program is created with compiler version 3.3.3 but is no longer downloadable, use version 4.4.5 as an alternative.
+  2. The original program is created with compiler version 3.3.3 but is no longer downloadable, use version 4.4.5 as an alternative.
 
 
