@@ -72,6 +72,10 @@ Result:
  3. PIP tag.
  4. USB receiver plugged in. (for debugging)
 
+They are (from left to right) LaunchPad, PIP tag and Receiver.
+
+![WARNING DIALOG](images/showup.jpg)
+
 ### Programs
 - Required 
   > Code Composer Studio (Checked avalible on Version: 6.1.1) with c++ compiler v 4.4.5 installed
@@ -121,7 +125,7 @@ Steps for flashing
  
   ![CODE FLASH SETUP](images/setup.jpg)
  
- 4. Simply click build, debug and result button in debug view in Code Composer step by step. 
+ 4. Simply click build, debug and result button in debug view in Code Composer step by step. If you succeed, you can receive the data from this PIP tag in terminal without installing the battery.
  
  
 ### Flash Code Troubleshooting
@@ -134,7 +138,7 @@ Steps for flashing
 
    Right-Click > Resource Configurations > Exclude from Build...
   
-  2. The original program is created with compiler version 3.3.3 but is no longer downloadable, use version 4.4.5 or 4.4.8 as an alternative.
+  2. The original program is created with compiler version 3.3.3 but is no longer downloadable, use version 4.4.5 or 4.4.8 as an alternative. Compiler version 18.1.2 LTS is confirmed not working.
   
   Project > Properties > General > Compiler Version > Select TI v4.4.5/TI v4.4.8
   
@@ -145,7 +149,7 @@ Steps for flashing
   ![WARNING DIALOG](images/ccsappcenter.png)
   CCS APP CENTER
   
-  Click into warning details and there could be a link to CCS APP CENTER download a compiler and try again. If this does not work, download TI compiler v4.4.5 [ti_cgt_msp430_4.4.8_windows_installer.exe](downloads) or from [official website](http://software-dl.ti.com/codegen/non-esd/downloads/download.htm#MSP430), install and do following steps.
+  Click into warning details and there could be a link to CCS APP CENTER download a compiler and try again. If this does not work, download TI compiler v4.4.8 [ti_cgt_msp430_4.4.8_windows_installer.exe](downloads) or from [official website](http://software-dl.ti.com/codegen/non-esd/downloads/download.htm#MSP430), install and do following steps.
   
   Project > Properties > General > Compiler Version > More > Select a new compiler from file-system > Browse (the compiler path).
 
