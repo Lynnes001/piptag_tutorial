@@ -98,10 +98,22 @@ Steps for flashing
  ```
  #define TXER_ID 3378	//0xABBADABA is default ID for automatic flashing
  ```
+ Change the `3378` to the ID of the PIP tag you want to flash, it is 3378 for my PIP tag.
+
+   - Change the frequency of sending data on line 89
+ ```
+ // How often MSP will wake up and check to see if sensing is required.
+ // If WAKE_INTVL < PACKTINTVL_MS then MSP can go back to sleep without transmission.
+ #define WAKE_INTVL MS_TEN_SECOND
+
+ // How frequently to transmit a packet when no data is "sensed"
+ // This will be the "heartbeat" transmission period.
+ #define PACKTINTVL_MS MS_TEN_SECOND
+ ```
+   Read the comment and try to change both `MS_TEN_SECOND` to `MS_ONE_SECOND` to change the frequence from once per ten second to once per second.
  
  // more options for setting.h
  
- Change the `3378` to the ID of the PIP tag you want to flash, it is 3378 for my PIP tag.
  
  3. Connect the program LaunchPad to PC and PIP tag like this. Remember to uninstall the battery before flashing.
   ![CODE FLASH SETUP](images/setup.jpg)
