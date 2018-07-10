@@ -82,7 +82,8 @@ They are (from left to right) LaunchPad, PIP tag and Receiver.
   
   > LaunchPad MSP-EXP430G2 Driver (download from Texas Instruments offical site)
 
-- File Structure (important files are listed only) Provided code
+- File Structure (important files are listed only)
+The code provided has a default setting which specifies a message sending frequence of once per ten second.   
 ```
 PIP1_SendBeacon
 ├── ...
